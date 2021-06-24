@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Table요소</title>
+    </head>
+    <body>
+        <style>
+            table{width:100%;}
+            th, td{border:1px solid red;}
+        </style>
+        <table><!-- summary 속성이 사라짐 : 보조도구를 이용하여 테스트를 해야 했고, 시각장애인을 제외하고 내용을 이해하고 판단하는 기준이 모호함. 시각장애인에게 방해가 되는 요소로 판단됨.
+                    width 속성이 들어가지 못하게 되었음. -->
+            <caption><!-- <caption>표의 제목</caption>으로 표현해도 무방함 -->
+                <details><!-- ▶ 표시가 나오며 summary 외의 글자는 표시를 눌렀을 때 화살표 방향이 바뀌며(▼) 나타남. -->
+                    <summary>표의 제목</summary>
+                    표의 요약글
+                </details>
+            </caption>
+            <colgroup>
+                <col width="100px"><!-- width 속성이 폐기되어 넣을 수 없게 되었음 --><!--★Q 엥 왜 돼요? -->
+                <col style="width:150px;"><!-- inline style로 넣어주어야 함 -->
+                <col><!-- 안 넣어도 됨 -->
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>1</th><!-- <col>에 width를 넣지 않고 <th>에 넣어도 괜찮으나, <col>에 넣는 것이 더 바람직함.-->
+                    <th>2</th>
+                    <th>3</th>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </thead>
+        </table><!-- 이외는 동일 -->
+    </body>
+</html>

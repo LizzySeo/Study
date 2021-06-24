@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>HTML4와 HTML5의 차이점</title>
+    </head>
+    <body>
+        <div>
+            <h1>HTML4</h1>
+            <div id="header"></div>
+            <div id="snb"></div><!-- SNB, GnB, LNB 등이 들어감 -->
+            <div id="contents">
+                <div dlass="box"></div>
+                <div dlass="article"></div>
+                <div dlass="post"></div>
+            </div>
+            <div id="footer"></div>
+        </div>
+        <div>
+            <h1>HTML5</h1>
+            <header></header><!-- 웹사이트의 이름, 로고, GNB(글로벌네비게이션바 : 로그인, 회원가입 등), LNB(로컬네비게이션바 : 대메뉴)등을 포함한 요소 -->
+            <nav></nav><!-- 특정 목적지로 이동할 수 있는 링크들을 모아놓음 -->
+            <main><!-- 웹사이트의 본문. 한 페이지에 한 번 사용. 자식으로 사용되지 않음. -->
+                <section><!-- 같은 성격의 내용, 관련이 있는 것들을 묶어줌. header나 footer 요소를 따로 넣어줄 수 있음. -->
+                    <article></article><!-- 본문과 별개의 콘텐츠, 다른 콘텐츠와 영향을 주고받지 않음. -->
+                    <article></article>
+                    <aside></aside><!-- 전체 페이지와 간접적인 관련이 있고, 분리된 요소. 쇼핑몰의 비슷한 상품 등. -->
+                </section>
+            </main>
+            <footer></footer><!-- 연락처, 카피라이트 등이 작성되는 곳. 꼬리말 등. -->
+        </div>
+    </body>
+</html>

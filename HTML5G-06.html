@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>video, audio 요소에 대해서</title>
+    </head>
+    <body>
+        <video controls autoplay loop preload="none" width="500px" width="300px"><!-- conmtrols : 컨트롤바 제공
+                                                                                  autoplay : 페이지 열리면 자동 재생
+                                                                                  loop : 무한 반복
+                                                                                  preload : 재생 전 데이터 다운 정도 (auto : 재생 전 모두 다운, metadata : 일부만 다운, none : 플레이 시킬 경우에만 다운)
+                                                                                  width : 비디오의 너비. 너비만 지정할 경우 비율에 맞춰서 높이가 자동 설정 됨.
+                                                                                  height : 비디오의 높이.-->
+            <source src="" type="video/mp4"/><!-- <source src="" type=""> : src에 있는 동영상이 재생됨.
+                                                                 type="video/mp4" : 확장자명 mp4의 비디오 -->
+        </video>
+        <audio controls autoplay loop preload="none"><!-- 오디오의 경우 너비, 높이값 없이 플레이어만 제공됨 -->
+            <source src="" type="video/mp4"/><!-- <source src="" type=""> : src에 있는 동영상이 재생됨.
+                                                                 type="audio/mp3" : 확장자명 mp3의 오디오 -->
+        </audio>
+    </body>
+</html>

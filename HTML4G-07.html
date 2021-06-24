@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Table에 대해서</title>
+    </head>
+    <body>
+        <table width="100%" border="1" summary="교육일자 7월 1일, 20일 이틀동안 서울, 수원 수강생 총 30명이 만족도 상을 나타내었다."><!-- summary : 표의 요약글. 시각장애인 전용 속성, 브라우저에 시각적으로 표현되지 않음. -->
+            <!-- 위의 표 크기나 선 등은 임의로 삽입한 것으로, 실제는 CSS(head)에서 적용해야 하는 부분임 -->
+            <caption>웹 표준 교육과정</caption><!-- caption : 표의 제목, 표의 위에 위치하며 텍스트 가운데 정렬 -->
+            <colgroup><!-- colgroup : 열의 그룹, <caption> 요소 다음에 위치함. 첫번째 <col> 요소는 표의 좌측 첫 번째 셀부터 적용됨. 가로사이즈(width)만 지정 가능. -->
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+                <!-- <col width="10px"> / <col style="width:10px"> / <col width="10%"> / <col style="width:10px"> / <col width="*"> / <col width=""> etc -->
+                <!-- table 전체 사이즈 및 가로 사이즈를 px로 설정하는 경우 전체 페이지 크기 변경 등 수정 사항이 생겼을 때 전체적으로 수정해야 하는 경우가 생길 수 있음. -->
+            </colgroup>
+            <!-- <thead>, <tfoot>, <tbody> : 행의 그룹, thead → tfoot → tboby 순으로 제공, 모든 행의 그룹을 제공하지 않아도 된다. - 콘텐츠의 구성에 딸라 유동적으로 달라진다.
+                                            <thead>에는 제목셀인 <th>만 제공할 수 있다. <tfoot>, <tbody>에는 제목셀 <th>, 내용셀 <td>를 복합적으로 제공할 수 있다. -->
+            <thead><!-- 머릿말 : 열에 대한 제목 -->
+                <tr><!-- tr : Table Row, 행 -->
+                    <th>교육일자</th><!-- th : Table Head Cell, 제목셀. 가운데 정렬, 세로 가운데 정렬, 굵은 글씨 -->
+                    <th>수강생</th>
+                    <th>지역</th>
+                    <th>만족도</th>
+                </tr>
+            </thead>
+            <tfoot><!-- 결론 : 결과 도출창 -->
+                <tr>
+                    <th>합계</th>
+                    <td>30명</td><!-- td : Table Data Cell, 좌측 정렬, 세로 가운데 정렬, 기본 글씨 -->
+                    <td>-</td>
+                    <td>상</td>
+                </tr>
+            </tfoot>
+            <tbody><!-- 본문 : 실제 데이터 -->
+                <tr>
+                    <th>2015년 07월 01일</th>
+                    <td>20명</td>
+                    <td>서울</td>
+                    <td>상</td>
+                </tr>
+                <tr>
+                    <th>2015년 07월 20일</th>
+                    <td>10명</td>
+                    <td>수원</td>
+                    <td>상</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/><br/><br/><br/><br/>
+
+        <table width="100%" border="1">
+            <caption>원본</caption>
+            <colgroup>
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+            </colgroup>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <br/><br/><br/><br/><br/>
+
+        <table width="100%" border="1">
+            <caption>열의 합침</caption><!-- 옆의 친구랑 붙는 것 -->
+            <colgroup>
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+            </colgroup>
+            <tr>
+                <td colspan="2">1</td><!-- <td colspan="(합칠 열의 수)">, 제일 왼쪽의 칸을 제외한 나머지 열을 삭제. 
+                                           colspan : <th>, <td> 열의 병합, 병합하려는 첫번째 열의 셀에 제공 -->
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td colspan="3">10</td>
+            </tr>
+        </table>
+
+        <br/><br/><br/><br/><br/>
+
+        <table width="100%" border="1">
+            <caption>행의 합침</caption><!-- 밑의 친구랑 붙는 것 -->
+            <colgroup>
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+                <col width="25%"/>
+            </colgroup>
+            <tr>
+                <td rowspan="2">1</td><!-- <td rowspan="(합칠 행의 수)">, 제일 위쪽의 칸을 제외한 나머지 행을 삭제. 
+                    rowspan : <th>, <td> 행의 병합, 병합하려는 첫번째 행의 셀에 제공 -->
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td rowspan="2">7</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>10</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <br/><br/><br/><br/><br/>
+
+        <table width="100%" border="1" summary="교육일자 7월 1일, 20일 이틀동안 서울, 수원 수강생 총 30명이 만족도 상을 나타내었다.">
+            <caption>웹 표준 교육과정 "*" 실험</caption>
+            <colgroup>
+                <col width="*"/>
+                <col width="*"/>
+                <col width="*"/>
+                <col width="*"/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>교육일자</th>
+                    <th>수강생</th>
+                    <th>지역</th>
+                    <th>만족도</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <td>30명</td>
+                    <td>-</td>
+                    <td>상</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th>2015년 07월 01일</th>
+                    <td>20명</td>
+                    <td>서울</td>
+                    <td>상</td>
+                </tr>
+                <tr>
+                    <th>2015년 07월 20일</th>
+                    <td>10명</td>
+                    <td>수원</td>
+                    <td>상</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/><br/><br/><br/><br/>
+
+        <table width="1000pix" border="1" summary="교육일자 7월 1일, 20일 이틀동안 서울, 수원 수강생 총 30명이 만족도 상을 나타내었다.">
+            <caption>웹 표준 교육과정 "" 실험</caption>
+            <colgroup>
+                <col width=""/>
+                <col width=""/>
+                <col width=""/>
+                <col width=""/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>교육일자</th>
+                    <th>수강생</th>
+                    <th>지역</th>
+                    <th>만족도</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <td>30명</td>
+                    <td>-</td>
+                    <td>상</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th>2015년 07월 01일</th>
+                    <td>20명</td>
+                    <td>서울</td>
+                    <td>상</td>
+                </tr>
+                <tr>
+                    <th>2015년 07월 20일</th>
+                    <td>10명</td>
+                    <td>수원</td>
+                    <td>상</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

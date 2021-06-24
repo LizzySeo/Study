@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>a요소에 대해서</title>
+    </head>
+    <body>
+        <!-- <a href="url">텍스트</a> : <a> = Anchor(닻)
+                                        href = Hypertext Reference
+                                        페이지와 페이지를 연결함
+                                        target 속성으로 페이지 열리는 방식 제공 - <a herf="url" target="_blank">텍스트</a>
+                                        다른 도메인 연결시 http:// 까지 제공해야 함.
+                                        클릭 전에는 파란색 텍스트, 클릭 후에는 보라색 밑줄이 기본제공됨.
+                                        Inline 요소라 옆으로 쌓임.-->
+
+        <a href="http://www.naver.com">네이버바로가기</a><br/><!-- 현재창에서 네이버 열림 -->
+        <a href="http://www.naver.com" target="_blank">네이버새창으로바로가기</a><br/><!-- 새로운 창에서 네이버 열림 -->
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+        <!-- 빈링크 이슈 -->
+        <a href="">(Internet Explore에서만)내 컴퓨터 열림</a><br/><!-- 링크 값에 내용이 없을 경우 -->
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <a href="#">맨 위로 이동</a><br/><!-- #만 제공하는 경우 -->
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <a href="#" onclick="">새로운 페이지 맨 위로 이동</a><br/><!--★ 이벤트를 통해서 창을...? 07:30 -->
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <a href="#content">ID:content 위치로 이동</a><br/><!-- 내부 링크를 제공하는 경우 -->
+        <!-- "#"뒤의 글자가 id 역할을 하여 해당 위치로 이동함/ 같은 id가 여러개인 경우 첫번째 위치로 이동  -->
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <a href="#a">현재 페이지에 없는 아이디를 넣는 경우</a><br/><!-- 없는 아이디를 넣는 경우 ("#none"을 넣는 경우도 있음) -->
+        <!-- 스크롤을 유지하면서 id에 해당하는 팝업창이 뜸 / ★ 안 뜨는데요...? -->
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <div id="content">ID:content로 이동하였습니다.</div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </body>
+</html>

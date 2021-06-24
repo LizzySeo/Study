@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>이미지요소</title>
+    </head>
+    <body>
+        <!-- <img src="(url)" alt="(대체텍스트)" longdesc="(긴글)"/> : 내용이 없는 경우는 빈 대체 텍스트 제공 (<img src="url" alt=""/>)
+                                                                      내용이 길거나 복잡한 경우 longdesc, 대체 콘텐츠 등으로 추가 정보 제공
+                                                                      longdexcription 확인 방법 : - FireFox>마우스우클릭>설명보기 -->
+
+        <img src="heart01.png" alt="하트1"/><br/> <!-- 같은 폴더 안에 있을 경우 -->
+        <img src="ImageTest02/Heart02.png" alt="하트2"/><br/> <!-- 하위 폴더 안에 있을 경우 -->
+        <img src="../Heart03.png" alt="하트3"/><br/> <!-- 상위 폴더 안에 있을 경우 -->
+        <img src="../ImageTest04/Heart04.png" alt="하트4" longdesc="HTML4G-0401longdesc.html"/><br/> <!-- 상위의 하위 폴더 안에 있을 경우 -->
+        <!-- / : 폴더명 뒤에 붙음.
+             ../ : 이전폴더로 감. -->
+
+        <!-- 파일 새로 만드는 것이 번거롭다고 생각될 경우 사용하는 방법 -->
+        <ul style="position:absolute; left:-5000%;"><!-- (CSS)"display:none;"의 경우 내용을 읽어주지 않기 때문에 "position"을 넣어주는 것이 좋음. -->
+            <li><스터디를 위한 실험></li>
+            <li>1. HTML4G-0401.html 파일 공부를 위한 longdexcription.</li>
+            <li>2. 일단 늘리기 위해 아무말 대잔치 중.</li>
+            <li>3. 김태찬 맨탈 나감.</li>
+            <li>4. 호두 이빨도 나감.</li>
+        </ul>
+
+        <!-- "<~ alt="">"의 내용에 넣을 말이 생각나지 않을 경우, 직관적인 단어 사용하기.-->
+    </body>
+</html>
